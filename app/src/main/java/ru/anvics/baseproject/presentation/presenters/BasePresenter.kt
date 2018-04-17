@@ -2,7 +2,12 @@ package ru.anvics.baseproject.presentation.presenters
 
 import ru.anvics.baseproject.presentation.views.BaseView
 
-interface BasePresenter<in V : BaseView> {
-    fun attachView(view: V)
-    fun destroy()
+abstract class BasePresenter<V : BaseView> {
+    protected var view: V? = null
+
+    open fun attachView(view: V) {
+        this.view = view
+    }
+
+    open fun destroy() {}
 }

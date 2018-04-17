@@ -8,6 +8,7 @@ import ru.anvics.baseproject.presentation.presenters.ExamplePresenter
 import ru.anvics.baseproject.presentation.views.ExampleView
 
 class ExampleActivity : BaseActivity(), ExampleView {
+
     private val presenter = ExamplePresenter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +25,11 @@ class ExampleActivity : BaseActivity(), ExampleView {
     override fun setEntity(entity: ExampleEntity) {
         tvEntityId.text = entity.id.toString()
         tvEntityTitle.text = entity.title
+    }
+
+
+    override fun error(message: String) {
+        //TODO("not implemented")
     }
 
     override fun onDetachedFromWindow() {

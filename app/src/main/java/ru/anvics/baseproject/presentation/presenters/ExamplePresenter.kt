@@ -6,13 +6,8 @@ import ru.anvics.baseproject.domain.interactors.BaseObserver
 import ru.anvics.baseproject.domain.interactors.GetEntityById
 import ru.anvics.baseproject.presentation.views.ExampleView
 
-class ExamplePresenter : BasePresenter<ExampleView> {
-    private var view: ExampleView? = null
+class ExamplePresenter : BasePresenter<ExampleView>() {
     private val getEntityById = GetEntityById(ExampleRepository)
-
-    override fun attachView(view: ExampleView) {
-        this.view = view
-    }
 
     fun getEntityById(id: Long) {
         getEntityById.setId(id)
