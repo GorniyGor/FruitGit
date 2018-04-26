@@ -5,7 +5,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import ru.anvics.baseproject.R
 import ru.anvics.baseproject.domain.ExampleEntity
 import ru.anvics.baseproject.presentation.presenters.ExamplePresenter
-import ru.anvics.baseproject.presentation.views.ExampleView
+import ru.anvics.baseproject.presentation.views.iviews.ExampleView
 
 class ExampleActivity : BaseActivity(), ExampleView {
 

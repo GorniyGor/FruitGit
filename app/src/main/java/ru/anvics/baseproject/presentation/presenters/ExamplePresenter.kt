@@ -4,7 +4,7 @@ import ru.anvics.baseproject.data.ExampleRepository
 import ru.anvics.baseproject.domain.ExampleEntity
 import ru.anvics.baseproject.domain.interactors.BaseObserver
 import ru.anvics.baseproject.domain.interactors.GetEntityById
-import ru.anvics.baseproject.presentation.views.ExampleView
+import ru.anvics.baseproject.presentation.views.iviews.ExampleView
 
 class ExamplePresenter : BasePresenter<ExampleView>() {
     private val getEntityById = GetEntityById(ExampleRepository)
